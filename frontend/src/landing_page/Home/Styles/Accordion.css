@@ -1,0 +1,51 @@
+/* Accordion.css */
+
+.accordion {
+  background-color: #0f0f0f;
+    color: #fff;
+  width: 100%;
+  font-family: 'Arial', sans-serif;
+  border-top: 1px solid #333;
+  
+}
+
+.accordion-item {
+  border-bottom: 1px solid #333;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  cursor: pointer;
+    margin-left: 40px;
+    margin-right: 40px;
+
+  /* font-size: 1.25rem; */
+}
+
+.accordion-header:hover {
+  background-color: #111;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.arrow.open {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  padding: 1rem;
+  background-color: #111;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.accordion-header span:first-child {
+  font-size: 1.5rem; /* or try 2rem for even bigger text */  /* optional: makes the text bolder */
+}

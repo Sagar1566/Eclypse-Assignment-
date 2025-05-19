@@ -4,8 +4,8 @@
   display: flex;
   flex-direction: row;
   gap: 2rem;
-  padding: 2rem;
   font-family: sans-serif;
+  background-color: #303030;
 }
 
 .video-section {
@@ -13,8 +13,8 @@
 }
 
 .product-video {
-  width: 100%;
-  border-radius: 10px;
+  width: 60%;
+  height: 100%;
 }
 
 .product-details {
@@ -100,6 +100,19 @@
 }
 
 .buy {
-  background-color: black;
+  background-color: rgba(255, 0, 0, 0.841);
   color: white;
 }
+/* 
+.video-section {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.product-video {
+  width: 110%;
+  height: auto;
+  transform: translateY(-20px); 
+} */

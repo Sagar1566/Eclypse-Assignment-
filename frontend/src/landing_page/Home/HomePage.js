@@ -6,6 +6,9 @@ import CardGallery from './EclypseGrid';
 import Eclypsev1 from './Elypsev1';
 import EclypseGrid from './EclypseGrid';
 import VideoCart from './VideoCart';
+import IntroText from './IntroText';
+import Accordion from './Accordion';
+import Testimonial from './Testimonial';
 
 function HomePage() {
     return ( 
@@ -13,7 +16,10 @@ function HomePage() {
         <NavigationBar/>
             <Eclypsev1/>
             <EclypseGrid/>
+            <IntroText/>
             <VideoCart/>
+            <Accordion/>
+            <Testimonial/>
             <Home/>
             <Footer/>
         </>

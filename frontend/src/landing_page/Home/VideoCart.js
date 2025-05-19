@@ -1,7 +1,8 @@
 // VideoCart.jsx
 import React, { useState } from 'react';
 import './Styles/VideoCart.css';
-import V2 from './Video/V2.mp4';
+import productVideo from './Video/V3.mp4'; // Adjust path as needed
+
 
 
 const VideoCart = () => {
@@ -10,12 +11,15 @@ const VideoCart = () => {
   const sizes = ['XS', 'S', 'M', 'L', 'XL'];
 
   return (
+
     <div className="video-cart">
       <div className="video-section">
         <video className="product-video" autoPlay muted loop>
-          <source src="./Video/V2.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
+          <source src={productVideo} type="video/mp4" />
         </video>
+
+
+
       </div>
 
       <div className="product-details">
