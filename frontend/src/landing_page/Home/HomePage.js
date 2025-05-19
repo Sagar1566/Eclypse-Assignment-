@@ -5,6 +5,7 @@ import Footer from './Footer';
 import CardGallery from './EclypseGrid';
 import Eclypsev1 from './Elypsev1';
 import EclypseGrid from './EclypseGrid';
+import VideoCart from './VideoCart';
 
 function HomePage() {
     return ( 
@@ -12,6 +13,7 @@ function HomePage() {
         <NavigationBar/>
             <Eclypsev1/>
             <EclypseGrid/>
+            <VideoCart/>
             <Home/>
             <Footer/>
         </>
