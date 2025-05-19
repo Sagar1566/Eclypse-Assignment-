@@ -1,6 +1,6 @@
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(12, 1fr); /* 12 equal columns */
   gap: 1rem;
   padding: 2rem;
   background-color: #0f0f0f;
@@ -25,21 +25,59 @@
 .grid-item:hover img {
   transform: scale(1.05);
 }
-
 .hover-text {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  top: 0; bottom: 0; left: 0; right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: rgba(0, 0, 0, 0.6);
   color: white;
-  padding: 1rem;
-  font-size: 1rem;
-  text-align: center;
+  font-size: 1.2rem;
   opacity: 0;
   transition: opacity 0.3s ease;
+  text-align: center;
 }
+
 
 .grid-item:hover .hover-text {
   opacity: 1;
+}
+
+/* Specific grid-column spans for items */
+.video {
+  grid-column: span 8;
+}
+
+.img2 {
+  grid-column: span 4;
+}
+
+.img3,
+.img4,
+.img5 {
+  grid-column: span 4; /* each takes 4 columns, so 3 items fit in 12 columns */
+}
+
+
+.img3,
+.img4,
+.img5 {
+  grid-column: span 4;
+  height: 0;
+  padding-bottom: 100%; /* makes the container square */
+  position: relative;
+  overflow: hidden;
+}
+
+.img3 img,
+.img4 img,
+.img5 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
