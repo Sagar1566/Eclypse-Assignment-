@@ -1,0 +1,75 @@
+/* EclypseContactCard.css */
+.eclypse-card {
+  background-color: #000;
+  color: #fff;
+  padding: 2rem;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .eclypse-card {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.eclypse-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.eclypse-title {
+  font-size: 2.25rem;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.eclypse-arrow {
+  font-size: 0.75rem;
+}
+
+.eclypse-nav {
+  margin-top: 1.5rem;
+}
+
+.eclypse-nav-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.eclypse-link {
+  color: #d1d5db;
+  text-decoration: none;
+}
+
+.eclypse-link:hover {
+  color: #fff;
+}
+
+.eclypse-separator {
+  color: #d1d5db;
+}
+
+.eclypse-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.eclypse-section {}
+
+.eclypse-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #9ca3af;
+}
+
+.eclypse-info {
+  margin-top: 0.25rem;
+  font-size: 1.25rem;
+}

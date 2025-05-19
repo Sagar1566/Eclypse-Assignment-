@@ -1,10 +1,9 @@
 import React from 'react';
-import './Home.css';
-import NavigationBar from './NavigationBar';
+import './Styles/Home.css';
 
 function Home() {
     return ( 
-        <NavigationBar/>
+        <h1>sagar</h1>
      );
 }
 

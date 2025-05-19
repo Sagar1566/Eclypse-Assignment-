@@ -1,10 +1,18 @@
 import React from 'react';
 import Home from './Home';
+import NavigationBar from './NavigationBar';
+import Footer from './Footer';
+import CardGallery from './CardGallery';
+import Eclypsev1 from './Elypsev1';
 
 function HomePage() {
     return ( 
         <>  
-            <Home/> 
+        <NavigationBar/>
+            <Eclypsev1/>
+            <CardGallery/>
+            <Home/>
+            <Footer/>
         </>
      );
 }
