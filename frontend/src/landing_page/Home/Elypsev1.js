@@ -6,7 +6,7 @@ const Eclypsev1 = () => {
     return (
         <div className="eclypse-container">
             <header className="eclypse-header">
-                <h1 className="eclypse-logo">Eclypse<sup>®</sup></h1>
+                {/* <h1 className="eclypse-logo">Eclypse<sup>®</sup></h1> */}
             </header>
             <span className="eclypse-year">© 2025</span>
 

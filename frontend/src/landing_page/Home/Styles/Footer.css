@@ -73,3 +73,12 @@
   margin-top: 0.25rem;
   font-size: 1.25rem;
 }
+
+.eclypse-arrow {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.eclypse-arrow:hover {
+  transform: translateY(-3px);
+}

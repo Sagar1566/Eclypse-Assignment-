@@ -1,48 +1,65 @@
-
+/* General reset and box-sizing */
 * {
     box-sizing: border-box;
 }
 
+/* Body padding to avoid overlap with fixed navbar */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    padding-top: 70px; /* Adjust based on actual navbar height */
+    background-color: #000; /* Assuming black background */
+    color: white;
 }
 
+/* Fixed transparent navbar with blur effect */
 .navbar {
-    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     padding: 10px 20px;
-    position: relative;   
 }
 
+/* Top section of navbar layout */
 .navbar-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+/* Main navbar layout */
 .navbar-main {
     display: flex;
     align-items: center;
     gap: 4rem;
     flex: 1;
 }
+
+/* Logo styling */
 .logo img {
     height: 50px;
     width: auto;
     object-fit: contain;
 }
 
+/* Hamburger menu (for mobile) */
 .hamburger {
     display: none;
     font-size: 26px;
     color: white;
     cursor: pointer;
-    position: absolute;   
-    top: 10px;               
-    right: 20px;            
+    position: absolute;
+    top: 10px;
+    right: 20px;
     z-index: 10;
 }
 
+/* Right side nav links */
 .right-section {
     display: flex;
     align-items: center;
@@ -50,6 +67,7 @@ body {
     gap: 4rem;
 }
 
+/* Navigation links */
 .nav-links {
     display: flex;
     gap: 4rem;
@@ -65,6 +83,7 @@ body {
     text-decoration: underline;
 }
 
+/* Buy button */
 .buy-button {
     background-color: white;
     color: black;
@@ -79,6 +98,22 @@ body {
     background-color: #FF3B30;
 }
 
+/* Hero / main content section */
+.hero {
+    margin-top: 0;
+    padding-top: 0;
+    padding: 100px 40px 40px 40px; /* Adjust top padding if you want spacing */
+    background-color: #111; /* Slight contrast */
+    min-height: 100vh; /* Ensures full viewport height */
+}
+
+/* Heading inside hero */
+.hero h1 {
+    font-size: 6rem;
+    margin: 0;
+}
+
+/* Responsive styles */
 @media screen and (max-width: 650px) {
     .navbar-main {
         flex-direction: column;
@@ -94,7 +129,7 @@ body {
         align-items: flex-start;
         width: 100%;
         display: none;
-        margin-top: 50px; 
+        margin-top: 50px;
     }
 
     .right-section.open {

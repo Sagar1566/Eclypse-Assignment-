@@ -1,14 +1,20 @@
-// EclypseContactCard.js
 import React from "react";
 import './Styles/Footer.css';
 
 export default function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // ⬅️ for smooth scrolling
+    });
+  };
+
   return (
     <div className="eclypse-card">
       <div className="eclypse-left">
         <h1 className="eclypse-title">
           Eclypse
-          <sup className="eclypse-arrow">↗</sup>
+          <sup className="eclypse-arrow" onClick={scrollToTop} style={{ cursor: 'pointer' }}>↗</sup>
         </h1>
         <nav className="eclypse-nav">
           <div className="eclypse-nav-row">
