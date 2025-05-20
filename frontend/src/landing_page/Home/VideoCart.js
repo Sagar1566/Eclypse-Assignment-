@@ -1,30 +1,41 @@
-// VideoCart.jsx
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // ✅ Add this
 import './Styles/VideoCart.css';
-import productVideo from './Video/V3.mp4'; // Adjust path as needed
-
-
+import productVideo from './Video/V3.mp4';
 
 const VideoCart = () => {
   const [selectedSize, setSelectedSize] = useState(null);
+  const navigate = useNavigate(); // ✅ Initialize navigate
 
   const sizes = ['XS', 'S', 'M', 'L', 'XL'];
 
-  return (
+  const handleBuy = () => {
+    if (!selectedSize) {
+      alert("Please select a size before proceeding.");
+      return;
+    }
 
+    // ✅ Navigate to checkout with optional product info
+    navigate('/checkout', {
+      state: {
+        productName: "Silhouette No. 1 – Vermilion",
+        price: 7999,
+        size: selectedSize,
+      }
+    });
+  };
+
+  return (
     <div className="video-cart">
       <div className="video-section">
         <video className="product-video" autoPlay muted loop>
           <source src={productVideo} type="video/mp4" />
         </video>
-
-
-
       </div>
 
       <div className="product-details">
         <p className="description">
-          A tailored composition in motion. Cut from structured wool with a sculpted shoulder and softened hem, this piece captures presence without force. Worn here in the stillness of a city in motion.
+          A tailored composition in motion. Cut from structured wool with a sculpted shoulder and softened hem...
         </p>
 
         <div className="image-previews">
@@ -53,7 +64,7 @@ const VideoCart = () => {
 
         <div className="action-buttons">
           <button className="add-to-cart">Add to Cart</button>
-          <button className="buy">Buy</button>
+          <button className="buy" onClick={handleBuy}>Buy</button>
         </div>
       </div>
     </div>
